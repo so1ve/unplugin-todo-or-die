@@ -28,7 +28,7 @@ export function transform(
 export const unpluginFactory: UnpluginFactory<Options | undefined> = (
 	options,
 ) => ({
-	name: "pkg-name",
+	name: "unplugin-todo-or-die",
 	transform(code, id) {
 		return transform(options, code, id);
 	},

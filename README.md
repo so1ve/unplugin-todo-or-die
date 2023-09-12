@@ -1,13 +1,30 @@
-# pkg-name
+# unplugin-todo-or-die
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+[![NPM version](https://img.shields.io/npm/v/unplugin-todo-or-die?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-todo-or-die)
+
+> TODO or DIEEEEEEE!!!!!!!!!!!!!
+
+This plugin turns these TODO comments:
+
+```ts
+// TODO(2021-01-01): do something
+// TODO: do something, expires 2021-01-01
+```
+
+Into such code:
+
+```ts
+if (Date.now() > 1_704_067_200_000) {
+	throw new Error("TODO expired: do something");
+}
+```
 
 ## 📦 Installation
 
 ```bash
-$ npm install -D pkg-name
-$ yarn add -D pkg-name
-$ pnpm add -D pkg-name
+$ npm install -D unplugin-todo-or-die
+$ yarn add -D unplugin-todo-or-die
+$ pnpm add -D unplugin-todo-or-die
 ```
 
 ## 🚀 Usage
@@ -17,11 +34,11 @@ $ pnpm add -D pkg-name
 
 ```ts
 // vite.config.ts
-import PkgName from "pkg-name/vite";
+import TodoOrDie from "unplugin-todo-or-die/vite";
 
 export default defineConfig({
 	plugins: [
-		PkgName({
+		TodoOrDie({
 			/* options */
 		}),
 	],
@@ -35,11 +52,11 @@ export default defineConfig({
 
 ```ts
 // rollup.config.js
-import PkgName from "pkg-name/rollup";
+import TodoOrDie from "unplugin-todo-or-die/rollup";
 
 export default {
 	plugins: [
-		PkgName({
+		TodoOrDie({
 			/* options */
 		}),
 		// other plugins
@@ -57,7 +74,7 @@ export default {
 module.exports = {
 	/* ... */
 	plugins: [
-		require("pkg-name/webpack")({
+		require("unplugin-todo-or-die/webpack")({
 			/* options */
 		}),
 	],
@@ -72,7 +89,7 @@ module.exports = {
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-	modules: ["pkg-name/nuxt"],
+	modules: ["unplugin-todo-or-die/nuxt"],
 });
 ```
 
@@ -86,7 +103,7 @@ export default defineNuxtConfig({
 module.exports = {
 	configureWebpack: {
 		plugins: [
-			require("pkg-name/webpack")({
+			require("unplugin-todo-or-die/webpack")({
 				/* options */
 			}),
 		],
@@ -104,7 +121,7 @@ module.exports = {
 module.exports = {
 	vitePlugins: [
 		[
-			"pkg-name/vite",
+			"unplugin-todo-or-die/vite",
 			{
 				/* options */
 			},
@@ -115,13 +132,13 @@ module.exports = {
 
 ```ts
 // quasar.conf.js [Webpack]
-const PkgNamePlugin = require("pkg-name/webpack");
+const TodoOrDiePlugin = require("unplugin-todo-or-die/webpack");
 
 module.exports = {
 	build: {
 		chainWebpack(chain) {
-			chain.plugin("pkg-name").use(
-				PkgNamePlugin({
+			chain.plugin("unplugin-todo-or-die").use(
+				TodoOrDiePlugin({
 					/* options */
 				}),
 			);
@@ -142,7 +159,7 @@ import { build } from "esbuild";
 build({
 	/* ... */
 	plugins: [
-		require("pkg-name/esbuild")({
+		require("unplugin-todo-or-die/esbuild")({
 			/* options */
 		}),
 	],
@@ -156,11 +173,11 @@ build({
 
 ```ts
 // astro.config.mjs
-import PkgName from "pkg-name/astro";
+import TodoOrDie from "unplugin-todo-or-die/astro";
 
 export default defineConfig({
 	integrations: [
-		PkgName({
+		TodoOrDie({
 			/* options */
 		}),
 	],
@@ -168,6 +185,8 @@ export default defineConfig({
 ```
 
 <br></details>
+
+## 🖥️ Credits
 
 ## 📝 License
 

@@ -10,7 +10,7 @@ export default defineNuxtModule<Options>({
 	meta: {
 		name,
 		version,
-		configKey: "pkg-name",
+		configKey: "unplugin-todo-or-die",
 		compatibility: {
 			bridge: true,
 		},
