@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should > transform 1`] = `
+{
+  "code": "
+		if (Date.now() > 1704067200000) throw new Error(\\"TODO expired: do something\\");
+		",
+  "map": SourceMap {
+    "file": undefined,
+    "mappings": "AAAA;AACA,CAAC,CAAC,8EAA0C;AAC5C,CAAC",
+    "names": [],
+    "sources": [
+      "",
+    ],
+    "sourcesContent": undefined,
+    "version": 3,
+  },
+}
+`;
+
+exports[`should > transform another case 1`] = `
+{
+  "code": "
+		if (Date.now() > 1704067200000) throw new Error(\\"TODO expired: do something\\");
+		",
+  "map": SourceMap {
+    "file": undefined,
+    "mappings": "AAAA;AACA,CAAC,CAAC,8EAAiC;AACnC,CAAC",
+    "names": [],
+    "sources": [
+      "",
+    ],
+    "sourcesContent": undefined,
+    "version": 3,
+  },
+}
+`;
