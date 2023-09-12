@@ -188,6 +188,8 @@ export default defineConfig({
 
 ## 🖥️ Credits
 
+Original version (ruby): https://github.com/searls/todo_or_die
+
 ## 📝 License
 
 [MIT](./LICENSE). Made with ❤️ by [Ray](https://github.com/so1ve)
