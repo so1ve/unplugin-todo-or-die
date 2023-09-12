@@ -45,9 +45,11 @@ export function transform(parsed: ParseResult<File>, s: MagicString) {
 	traverse(parsed, {
 		enter({ node }) {
 			comments.push(
-				...(node.innerComments?.filter(filterComments) ?? []),
-				...(node.leadingComments?.filter(filterComments) ?? []),
-				...(node.trailingComments?.filter(filterComments) ?? []),
+				...[
+					...(node.leadingComments ?? []),
+					...(node.innerComments ?? []),
+					...(node.trailingComments ?? []),
+				].filter(filterComments),
 			);
 		},
 	});
