@@ -7,8 +7,8 @@
 This plugin turns these TODO comments:
 
 ```ts
-// TODO(2021-01-01): do something
-// TODO: do something, expires 2021-01-01
+// TODO::expires(2021-01-01): do something
+// TODO::expire(2021-01-01): do something
 ```
 
 Into such code:
