@@ -7,9 +7,8 @@ import MagicString from "magic-string";
 const filterComments = (comment: Comment): comment is CommentLine =>
 	comment.type === "CommentLine";
 
-const todoReg =
-	// eslint-disable-next-line regexp/no-super-linear-backtracking
-	/TODO\((\d{4}-\d{2}-\d{2})\):\s*(.*)|TODO:\s*(.*)\s*,\s*expires:\s*(\d{4}-\d{2}-\d{2})/;
+// eslint-disable-next-line regexp/no-super-linear-backtracking
+const todoReg = /^\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/;
 
 interface Todo {
 	expires: number;
@@ -22,10 +21,7 @@ function parseComment(comment: CommentLine): Todo | undefined {
 	if (!match) {
 		return;
 	}
-	let [, date, content] = match;
-	if (!date && !content) {
-		[, , , content, date] = match;
-	}
+	const [, date, content] = match;
 	if (match && date) {
 		const expires = new Date(date).getTime();
 

@@ -3,11 +3,11 @@
 exports[`should > transform 1`] = `
 {
   "code": "
-		if (Date.now() > 1704067200000) throw new Error(\\"TODO expired: do something\\");
+		if (Date.now() > 946684800000) throw new Error(\\"TODO expired: do something\\");
 		",
   "map": SourceMap {
     "file": undefined,
-    "mappings": "AAAA;AACA,CAAC,CAAC,8EAA0C;AAC5C,CAAC",
+    "mappings": "AAAA;AACA,CAAC,CAAC,6EAA0C;AAC5C,CAAC",
     "names": [],
     "sources": [
       "",
@@ -21,11 +21,11 @@ exports[`should > transform 1`] = `
 exports[`should > transform another case 1`] = `
 {
   "code": "
-		if (Date.now() > 1704067200000) throw new Error(\\"TODO expired: do something\\");
+		if (Date.now() > 946684800000) throw new Error(\\"TODO expired: do something\\");
 		",
   "map": SourceMap {
     "file": undefined,
-    "mappings": "AAAA;AACA,CAAC,CAAC,8EAAiC;AACnC,CAAC",
+    "mappings": "AAAA;AACA,CAAC,CAAC,6EAAyC;AAC3C,CAAC",
     "names": [],
     "sources": [
       "",

@@ -1,14 +1,14 @@
 import { describe, expect, it } from "vitest";
 
-import { transform } from "../src/core";
+import { transform } from "../src/core/transform";
 
-const testTransform = (code: string) => transform(undefined, code, "foo.ts");
+const testTransform = (code: string) => transform(code, "foo.ts");
 
 describe("should", () => {
 	it("transform", () => {
 		expect(
 			testTransform(`
-		// TODO: do something, expires: 2024-01-01
+		// TODO::expires(2000-01-01): do something
 		`),
 		).toMatchSnapshot();
 	});
@@ -16,7 +16,7 @@ describe("should", () => {
 	it("transform another case", () => {
 		expect(
 			testTransform(`
-		// TODO(2024-01-01): do something
+		// TODO::expire(2000-01-01): do something
 		`),
 		).toMatchSnapshot();
 	});
