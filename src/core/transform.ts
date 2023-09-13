@@ -1,7 +1,8 @@
-import type { ParseResult } from "@babel/parser";
+import type { ParserOptions } from "@babel/parser";
+import { parse } from "@babel/parser";
 import traverse from "@babel/traverse";
-import type { Comment, CommentLine, File } from "@babel/types";
-import type MagicString from "magic-string";
+import type { Comment, CommentLine } from "@babel/types";
+import MagicString from "magic-string";
 
 const filterComments = (comment: Comment): comment is CommentLine =>
 	comment.type === "CommentLine";
@@ -39,7 +40,40 @@ function parseComment(comment: CommentLine): Todo | undefined {
 const generateDieCode = (todo: Todo) =>
 	`if (Date.now() > ${todo.expires}) throw new Error("TODO expired: ${todo.content}");`;
 
-export function transform(parsed: ParseResult<File>, s: MagicString) {
+const getParseOptions = (isJsx: boolean): ParserOptions => ({
+	sourceType: "module",
+	allowImportExportEverywhere: true,
+	allowReturnOutsideFunction: true,
+	allowNewTargetOutsideFunction: true,
+	allowSuperOutsideMethod: true,
+	allowUndeclaredExports: true,
+	errorRecovery: true,
+	plugins: [
+		"doExpressions",
+		"exportDefaultFrom",
+		"functionBind",
+		"functionSent",
+		"throwExpressions",
+		"partialApplication",
+		"decorators",
+		"decimal",
+		"moduleBlocks",
+		"asyncDoExpressions",
+		"regexpUnicodeSets",
+		"destructuringPrivate",
+		"decoratorAutoAccessors",
+		"importReflection",
+		"explicitResourceManagement",
+		"decoratorAutoAccessors",
+		"typescript",
+		...(isJsx ? ["jsx" as const] : []),
+		["importAttributes", { deprecatedAssertSyntax: true }],
+	],
+});
+
+export function transform(code: string, id: string) {
+	const s = new MagicString(code);
+	const parsed = parse(code, getParseOptions(/(?:js|x)$/.test(id)));
 	const comments: CommentLine[] = [];
 
 	traverse(parsed, {
