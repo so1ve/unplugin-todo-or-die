@@ -1,7 +1,7 @@
 {
 	"name": "unplugin-todo-or-die",
 	"version": "0.1.0",
-	"packageManager": "pnpm@8.7.5",
+	"packageManager": "pnpm@8.7.6",
 	"author": "Ray <i@mk1.io> (@so1ve)",
 	"description": "",
 	"keywords": [
