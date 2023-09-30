@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import { transform } from "../src/core/transform";
 
-const testTransform = (code: string) => transform(code, "foo.ts");
+const testTransform = (code: string) => transform(code);
 
 describe("should", () => {
 	it("transform", () => {

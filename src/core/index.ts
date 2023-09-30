@@ -18,7 +18,7 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
 			return null;
 		}
 
-		return transform(code, id);
+		return transform(code);
 	},
 });
 
