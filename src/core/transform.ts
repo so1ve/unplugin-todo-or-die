@@ -20,8 +20,8 @@ function parseComment(match: RegExpMatchArray): Todo | undefined {
 		return {
 			expires,
 			content,
-			start: match.index + offset,
-			end: match.index + comment.length,
+			start: match.index! + offset,
+			end: match.index! + comment.length,
 		};
 	}
 }
