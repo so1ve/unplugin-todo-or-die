@@ -1,7 +1,7 @@
 import MagicString from "magic-string";
 
 // eslint-disable-next-line regexp/no-super-linear-backtracking, regexp/no-unused-capturing-group
-const todoReg = /^\s*\/\/\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/g;
+const todoReg = /^[\s]*\/\/\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/g;
 
 interface Todo {
 	expires: number;
@@ -29,6 +29,7 @@ const generateDieCode = (todo: Todo) =>
 
 export function transform(code: string) {
 	const s = new MagicString(code);
+	console.log(code)
 	const matches = [...code.matchAll(todoReg)];
 	const todos = matches.map(parseComment).filter(Boolean) as Todo[];
 
