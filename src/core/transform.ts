@@ -11,6 +11,7 @@ interface Todo {
 }
 
 function parseComment(match: RegExpExecArray): Todo | undefined {
+	console.log({match})
 	const [comment, date, content] = match;
 	if (date) {
 		const expires = new Date(date).getTime();
@@ -30,6 +31,7 @@ const generateDieCode = (todo: Todo) =>
 export function transform(code: string) {
 	const s = new MagicString(code);
 	const matches = [...code.matchAll(todoReg)];
+	console.log({matches})
 	const todos = matches.map(parseComment).filter(Boolean) as Todo[];
 
 	for (const todo of todos) {
