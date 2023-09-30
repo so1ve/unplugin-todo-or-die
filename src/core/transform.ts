@@ -1,8 +1,7 @@
 import MagicString from "magic-string";
-
-// eslint-disable-next-line regexp/no-super-linear-backtracking, regexp/no-unused-capturing-group
 const todoReg =
-	/^[ \t]*\/\/\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/gm;
+// eslint-disable-next-line regexp/no-super-linear-backtracking, regexp/no-unused-capturing-group
+	/^\s*\/\/\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/gm;
 
 interface Todo {
 	expires: number;
@@ -13,13 +12,13 @@ interface Todo {
 
 function parseComment(match: RegExpMatchArray): Todo | undefined {
 	const [comment, date, content] = match;
-	if (date) {
+	if (date) {const offset=comment.indexOf('//')
 		const expires = new Date(date).getTime();
 
 		return {
 			expires,
 			content,
-			start: match.index,
+			start: match.index+offset,
 			end: match.index + comment.length,
 		};
 	}
