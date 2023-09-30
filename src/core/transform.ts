@@ -32,7 +32,7 @@ const generateDieCode = (todo: Todo) =>
 
 export function transform(code: string, id: string) {
 	const s = new MagicString(code);
-		const matches=code.matchAll(todoReg)
+		const matches=[...code.matchAll(todoReg) ]
 	const todos = matches.map(parseComment).filter(Boolean) as Todo[];
 
 	for (const todo of todos) {
