@@ -29,11 +29,11 @@ devDependencies:
     specifier: ^3.4.3
     version: 3.8.0(rollup@3.29.4)
   '@so1ve/eslint-config':
-    specifier: 1.0.0-alpha.18
-    version: 1.0.0-alpha.18(eslint-plugin-import@2.28.1)(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)(vitest@0.34.6)
+    specifier: 1.0.0-alpha.19
+    version: 1.0.0-alpha.19(eslint-plugin-import@2.28.1)(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)(vitest@0.34.6)
   '@so1ve/prettier-config':
-    specifier: 1.0.0-alpha.18
-    version: 1.0.0-alpha.18(prettier@3.0.3)
+    specifier: 1.0.0-alpha.19
+    version: 1.0.0-alpha.19(prettier@3.0.3)
   '@types/node':
     specifier: ^18.16.6
     version: 18.18.6
@@ -1000,8 +1000,8 @@ packages:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
     dev: true
 
-  /@so1ve/eslint-config@1.0.0-alpha.18(eslint-plugin-import@2.28.1)(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)(vitest@0.34.6):
-    resolution: {integrity: sha512-0xaPoJu9yVKc8vJAu1MxxDeMSXNvnx5Dyf/aKyI6c67NfgPLCIC+gMVh0dksNarqWuvdW8+g8Ze9yMRUblggDg==}
+  /@so1ve/eslint-config@1.0.0-alpha.19(eslint-plugin-import@2.28.1)(eslint@8.52.0)(prettier@3.0.3)(typescript@5.2.2)(vitest@0.34.6):
+    resolution: {integrity: sha512-m8PjhCLdpeyhb7GeX7wTCrmBtlhRwvjs3lW1lOwWB/OD61rAuSrH/KU6vwATmdJ/9FT6ETYiZZ7oZ2tV5IqkBA==}
     peerDependencies:
       eslint: '>=8.40.0'
       prettier: ^3.0.0
@@ -1009,8 +1009,8 @@ packages:
       '@eslint-community/eslint-plugin-eslint-comments': 4.1.0(eslint@8.52.0)
       '@html-eslint/eslint-plugin': 0.19.1
       '@html-eslint/parser': 0.19.1
-      '@so1ve/eslint-plugin': 1.0.0-alpha.18(eslint@8.52.0)(typescript@5.2.2)
-      '@so1ve/eslint-plugin-sort-imports': 1.0.0-alpha.18(eslint@8.52.0)
+      '@so1ve/eslint-plugin': 1.0.0-alpha.19(eslint@8.52.0)(typescript@5.2.2)
+      '@so1ve/eslint-plugin-sort-imports': 1.0.0-alpha.19(eslint@8.52.0)
       '@typescript-eslint/eslint-plugin': 6.8.0(@typescript-eslint/parser@6.8.0)(eslint@8.52.0)(typescript@5.2.2)
       '@typescript-eslint/parser': 6.8.0(eslint@8.52.0)(typescript@5.2.2)
       '@unocss/eslint-config': 0.55.7(eslint@8.52.0)(typescript@5.2.2)
@@ -1058,8 +1058,8 @@ packages:
       - vitest
     dev: true
 
-  /@so1ve/eslint-plugin-sort-imports@1.0.0-alpha.18(eslint@8.52.0):
-    resolution: {integrity: sha512-UcZKTVS1AKT3VK97f+yWP0sVGrT5MZ9Hiik5IMSJY7mR05cGJOP/JP/QF/TdfDyP0pumpKtIwiDUkEa4Yk7B5g==}
+  /@so1ve/eslint-plugin-sort-imports@1.0.0-alpha.19(eslint@8.52.0):
+    resolution: {integrity: sha512-bh7Lp28ADGLd9MOcb9yO1R7HdTX0ZmxJJnHyafgaZyohbSJ245zXziOzu3TklC6yskf7bHDWHujnPARiMFytBQ==}
     peerDependencies:
       eslint: '>=8.40.0'
     dependencies:
@@ -1067,8 +1067,8 @@ packages:
       natsort: 2.0.3
     dev: true
 
-  /@so1ve/eslint-plugin@1.0.0-alpha.18(eslint@8.52.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-JEO1/k69hyoechYoW+TDGK1WumwvyNGrX/fLhIHAvQoFp7V5fQW3RrthB59tFcpT/RQRQ62CHqmcMM6UVzGsDg==}
+  /@so1ve/eslint-plugin@1.0.0-alpha.19(eslint@8.52.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-/4eMdvdlrbdWAaoj084Z7p9/iqfCEiM/hM4rVaTTh8EuwKnTccG3oToTDe4aD23jzNykXkjTHf7A1QeFP0rkVQ==}
     dependencies:
       '@typescript-eslint/types': 6.8.0
       '@typescript-eslint/utils': 6.8.0(eslint@8.52.0)(typescript@5.2.2)
@@ -1078,20 +1078,20 @@ packages:
       - typescript
     dev: true
 
-  /@so1ve/prettier-config@1.0.0-alpha.18(prettier@3.0.3):
-    resolution: {integrity: sha512-fY90Lf65a0uw+/bh3n/AGavwho9B8PQ8ZnMD8tsI3uk5y9PtzjKZyAZOld09U8jv4EWHIK5U9wxcCQEFqHponw==}
+  /@so1ve/prettier-config@1.0.0-alpha.19(prettier@3.0.3):
+    resolution: {integrity: sha512-1idDJfEsTi6v3hlJwc1qnu2tSvuUCa3euW8l7XFFMj66GZ7A6BBp+HuAJmCUHO6yJ+XuaOMArgK48soe7OS1rQ==}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
-      '@so1ve/prettier-plugin-toml': 1.0.0-alpha.18(prettier@3.0.3)
+      '@so1ve/prettier-plugin-toml': 1.0.0-alpha.19(prettier@3.0.3)
       prettier: 3.0.3
       prettier-plugin-astro: 0.12.0
-      prettier-plugin-curly-and-jsdoc: 1.0.0-alpha.18(prettier@3.0.3)
+      prettier-plugin-curly-and-jsdoc: 1.0.0-alpha.19(prettier@3.0.3)
       prettier-plugin-pkgsort: 0.2.1(prettier@3.0.3)
     dev: true
 
-  /@so1ve/prettier-plugin-toml@1.0.0-alpha.18(prettier@3.0.3):
-    resolution: {integrity: sha512-EUerMs9c3k4sHSvCGcemfOa5UK8vvS+IuXTqdSjz3zxsYEXO8/RI3JDLIKyAplo2Hpgr6WMJfPIwy4XARWAlCg==}
+  /@so1ve/prettier-plugin-toml@1.0.0-alpha.19(prettier@3.0.3):
+    resolution: {integrity: sha512-qQE43jMRCzbjmHspR3ULrJ6ZjF2mxyKJjdm1gNG7fiuqVpo/H4vA7GaNWpAJHwc42TfxyM750fbT/SfA0lbksw==}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
@@ -5143,8 +5143,8 @@ packages:
       sass-formatter: 0.7.8
     dev: true
 
-  /prettier-plugin-curly-and-jsdoc@1.0.0-alpha.18(prettier@3.0.3):
-    resolution: {integrity: sha512-8nrxX+g5hIQ4COjfKk2gsByzl3ojJPIk2rAcM9zTtLHn+UGCpg9QlEheEliNg4PLK+wJVEHkVvzTYbwUssfC6Q==}
+  /prettier-plugin-curly-and-jsdoc@1.0.0-alpha.19(prettier@3.0.3):
+    resolution: {integrity: sha512-boaw07TEGXHlJMBjR9xGdyJ3Ff9uNVxYPh1nwZZaP1LU/lM9Vghfk+ogbTrBoFkTw/d4fRnte8HAVqbGR3fQyQ==}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
