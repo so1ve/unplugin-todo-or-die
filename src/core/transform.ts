@@ -1,7 +1,7 @@
 import MagicString from "magic-string";
 
 const todoReg =
-	// eslint-disable-next-line regexp/no-super-linear-backtracking, regexp/no-unused-capturing-group
+	// eslint-disable-next-line regexp/no-unused-capturing-group
 	/^\s*\/\/\s*TODO::expires?\((\d{4}-\d{2}-\d{2})\):\s*(.*)$/gm;
 
 interface Todo {
