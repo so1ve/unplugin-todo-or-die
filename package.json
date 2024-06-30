@@ -1,7 +1,7 @@
 {
 	"name": "unplugin-todo-or-die",
 	"version": "0.1.0",
-	"packageManager": "pnpm@8.15.3",
+	"packageManager": "pnpm@8.15.8",
 	"author": "Ray <i@mk1.io> (@so1ve)",
 	"description": "",
 	"keywords": [
@@ -107,8 +107,8 @@
 	"devDependencies": {
 		"@antfu/ni": "^0.21.3",
 		"@nuxt/schema": "^3.4.3",
-		"@so1ve/eslint-config": "1.4.0",
-		"@so1ve/prettier-config": "1.4.0",
+		"@so1ve/eslint-config": "1.5.4",
+		"@so1ve/prettier-config": "1.5.4",
 		"@types/node": "^18.16.6",
 		"bumpp": "^9.1.0",
 		"eslint": "^8.40.0",
